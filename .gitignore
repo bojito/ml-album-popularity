@@ -3,6 +3,7 @@
 config.py
 data/
 images/
+images_64/
 
 ### Python template
 # Byte-compiled / optimized / DLL files
