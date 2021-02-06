@@ -4,6 +4,8 @@
   <p align="center">
     Predict Genre and Popularity of a music album, based on the album's cover.
   </p>
+  <br>
+  <br>
 </p>
 
 
@@ -24,6 +26,8 @@
       <a href="#challenges-so-far">Challenges so far</a>
     </li>
   </ol>
+  <br>
+  <br>
 </details>
  
  
