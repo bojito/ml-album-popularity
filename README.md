@@ -38,7 +38,7 @@ Features:
 * Various endpoints requests
 
 
-
+------
 
 ## Build Dataset
 
@@ -46,7 +46,7 @@ Features:
 
 Used to build the dataset.
 
-
+------
 
 
 ## Explore Dataset 
@@ -57,6 +57,7 @@ Expore the dataset regarding album popularity and genres.
 
 Spotify API returns multiple genres per artist, we keep the most common and filter out the rest based on their corellation.
 
+------
 
 ## Feature Extraction 
 
@@ -67,7 +68,7 @@ The following features are extracted from each image:
 * `has_face`: true if the image contains face(s)
 * `hog_descriptor`
 
-
+------
 
 ## Challenges so far 
 
