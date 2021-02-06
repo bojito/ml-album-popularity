@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <h3 align="center">Predict Album Genre and Popularity</h3>
+  <h2 align="center">Predict Album Genre and Popularity</h2>
   <p align="center">
     Predict Genre and Popularity of a music album, based on the album's cover.
   </p>
