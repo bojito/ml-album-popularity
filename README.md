@@ -70,7 +70,7 @@ The following features are extracted from each image:
 
 
 ## Challenges so far 
------------
+
 * Spotify API prevents continuous requests for downloading album cover images. Added 1 sec delay and a retry method.
 * Artist genres are returned as a list, which is a bit tricky to handle in pandas. 
 * Spotify API returns a large number of different genres. Had to keep the most common ones by using corellation matrix. (Perform clustering for better results)
