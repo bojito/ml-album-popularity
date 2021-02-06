@@ -22,6 +22,10 @@
         <li>
       <a href="#explore-dataset">Explore Dataset</a>
     </li>
+     </li>
+        <li>
+      <a href="#feature-extraction">Feature Extraction</a>
+    </li>
     <li>
       <a href="#challenges-so-far">Challenges so far</a>
     </li>
