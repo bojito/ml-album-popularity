@@ -27,6 +27,12 @@ Expore the dataset regarding album popularity and genres.
 Spotify API returns multiple genres per artist, we keep the most common and filter out the rest based on their corellation.
 
 
+**4 - Feature Extraction** - [view notebook](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/4%20-%20Extract%20Features.ipynb)
+-----------
+The following features are extracted from each image:
+
+* has_face: true if the image contains face(s)
+* hog_descriptor
 
 
 
