@@ -27,8 +27,8 @@
 </details>
  
  
-## Spotify API  
------------
+## Spotify API 
+
 [view notebook](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/1%20-%20Spotify%20API.ipynb)
 
 Contains the implementation of the SpotifyAPI class.
@@ -41,24 +41,27 @@ Features:
 
 
 ## Build Dataset
+
 [view notebook](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/2%20-%20Build%20Dataset.ipynb)
------------
+
 Used to build the dataset.
 
 
 
 
 ## Explore Dataset 
------------
+
 [view notebook](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/3%20-%20Explore%20Dataset.ipynb)
+
 Expore the dataset regarding album popularity and genres. 
 
 Spotify API returns multiple genres per artist, we keep the most common and filter out the rest based on their corellation.
 
 
 ## Feature Extraction 
------------
+
 [view notebook](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/4%20-%20Extract%20Features.ipynb)
+
 The following features are extracted from each image:
 
 * `has_face`: true if the image contains face(s)
