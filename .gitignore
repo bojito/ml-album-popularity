@@ -4,6 +4,7 @@ config.py
 data/
 images/
 images_64/
+*.pkl 
 
 ### Python template
 # Byte-compiled / optimized / DLL files
