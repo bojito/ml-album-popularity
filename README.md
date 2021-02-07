@@ -1,9 +1,11 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <h3 align="center">Predict Album Genre and Popularity</h3>
+  <h2 align="center">Predict Album Genre and Popularity</h2>
   <p align="center">
     Predict Genre and Popularity of a music album, based on the album's cover.
   </p>
+  <br>
+  <br>
 </p>
 
 
@@ -20,10 +22,16 @@
         <li>
       <a href="#explore-dataset">Explore Dataset</a>
     </li>
+     </li>
+        <li>
+      <a href="#feature-extraction">Feature Extraction</a>
+    </li>
     <li>
       <a href="#challenges-so-far">Challenges so far</a>
     </li>
   </ol>
+  <br>
+  <br>
 </details>
  
  
