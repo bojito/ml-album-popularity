@@ -23,8 +23,14 @@
       <a href="#explore-dataset">Explore Dataset</a>
     </li>
      </li>
-        <li>
+    <li>
       <a href="#feature-extraction">Feature Extraction</a>
+    </li>
+    <li>
+      <a href="#predict-popularity">Predict Popularity</a>
+    </li>
+    <li>
+      <a href="#classify-genre">Classify Genre</a>
     </li>
     <li>
       <a href="#challenges-so-far">Challenges so far</a>
@@ -99,6 +105,15 @@ The following features are extracted from each image:
 * `hog_descriptor` : the hog descriptor vector 
 * `hsv_hist` : the hsv color histogram (3D)
 * `lbp_hist` : the local binary patterns histogram
+
+## Predict Popularity
+
+[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/5%20-%20Predict%20Popularity.ipynb)
+
+## Classify Genre
+
+[`view notebook`](https://github.com/bojito/ml-album-popularity/blob/main/6%20-%20Classify%20Genre.ipynb)
+
 
 
 
