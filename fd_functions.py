@@ -2,7 +2,8 @@ import numpy as np
 import cv2
 from skimage.transform import resize
 from skimage.feature import hog
-
+from skimage.color import rgb2gray
+from skimage import feature
 
 def fd_hog_descriptor(image):
     # skimage HOG descriptor
@@ -13,7 +14,14 @@ def fd_hog_descriptor(image):
     multichannel=False
     transform_sqrt=True  
     block_norm="L1"
-    
+    resized_img = resize(image, (100,100)) 
+
+    if resized_img.shape[-1] == 3:
+        gray_img = rgb2gray(resized_img)
+    else:
+        gray_img = resized_img
+        
+        
     fd = hog(gray_img, 
              orientations=orientations, 
              pixels_per_cell=pixels_per_cell, 
@@ -33,3 +41,26 @@ def fd_hsv_histogram(image):
     cv2.normalize(hsv_hist, hsv_hist)
     
     return hsv_hist.flatten()
+    
+    
+def fd_local_binary_pattern(image):
+    numPoints = 24
+    radius = 8
+    eps=1e-7
+    
+    if image.shape[-1] == 3:
+        gray_img = rgb2gray(image)
+    else:
+        gray_img=image
+        
+    lbp = feature.local_binary_pattern(gray_img, numPoints, radius, method="uniform")
+
+    (hist, _) = np.histogram(lbp.ravel(),
+                             bins=np.arange(0, numPoints + 3), 
+                             range=(0, numPoints + 2))
+
+    # normalize the histogram
+    hist = hist.astype("float")
+    hist /= (hist.sum() + eps)
+    
+    return hist, lbp
