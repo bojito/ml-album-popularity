@@ -112,7 +112,7 @@ The following features are extracted from each image:
 
 ## Classify Genre
 
-[`view notebook`](https://github.com/bojito/ml-album-popularity/blob/main/6%20-%20Classify%20Genre.ipynb)
+[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/6%20-%20Classify%20Genre.ipynb)
 
 
 
