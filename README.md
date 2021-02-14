@@ -29,11 +29,11 @@
     <li>
       <a href="#feature-extraction">Feature Extraction</a>
     </li>
-    <li>
-      <a href="#predict-popularity">Predict Popularity</a>
+     <li>
+      <a href="#classify-genre">Classify Genre</a>
     </li>
     <li>
-      <a href="#classify-genre">Classify Genre</a>
+      <a href="#predict-popularity">Predict Popularity</a>
     </li>
     <li>
       <a href="#challenges-so-far">Challenges so far</a>
@@ -137,21 +137,32 @@ The following features are extracted from each image:
   </a>
 </p>
 
-
-## Predict Popularity
-
-[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/5%20-%20Predict%20Popularity.ipynb)
-
 ## Classify Genre
 
 [`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/6%20-%20Classify%20Genre.ipynb)
 
+A set of different classifiers is tested using K-Fold Cross Validation. 
 
+Random Forest Classifier gives the best overall accuracy but **overfits** the train dataset. Our model has **Low Bias** but **High Variance** and does not generalize well.
+
+The most notable result is the F1-Score for `pop` genre: 65%
+
+**Sample Execution on Test Data**
+
+<p align="center">
+  <a>
+    <img src="other/pred_test.png" alt="Logo" width="731" height="238">
+  </a>
+</p>
+
+## Predict Popularity
+
+[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/5%20-%20Predict%20Popularity.ipynb)
 
 
 ## Challenges so far 
 
 * Spotify API prevents continuous requests for downloading album cover images. Added 1 sec delay and a retry method.
 * Artist genres are returned as a list, which is a bit tricky to handle in pandas. 
-* Spotify API returns a large number of different genres. Had to keep the most common ones by using corellation matrix. (Perform clustering for better results
+* Spotify API returns a large number of different genres. Had to keep the most common ones by using corellation matrix. (Perform clustering for better results)
 * Dataset contains more examples from pop genre compared to rock, rap. Should balance classes with more data.
