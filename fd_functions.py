@@ -13,13 +13,14 @@ def fd_hog_descriptor(image):
     visualize=False
     multichannel=False
     transform_sqrt=True  
-    block_norm="L1"
+    block_norm="L2"
+    
     resized_img = resize(image, (100,100)) 
-
+    
     if resized_img.shape[-1] == 3:
         gray_img = rgb2gray(resized_img)
     else:
-        gray_img = resized_img
+        gray_img=resized_img
         
         
     fd = hog(gray_img, 
@@ -32,7 +33,6 @@ def fd_hog_descriptor(image):
              block_norm=block_norm)
     
     return fd
-    
     
     
 def fd_hsv_histogram(image):
