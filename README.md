@@ -13,6 +13,9 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
+      <li>
+      <a href="#installation">Installation</a>
+    </li>
     <li>
       <a href="#spotify-api">Spotify API</a>
     </li>
@@ -40,7 +43,23 @@
   <br>
 </details>
  
- 
+
+## Installation 
+
+1. Get a free [Spotify API](https://developer.spotify.com/) Key
+2. Clone the repo
+   ```sh
+   git clone https://github.com/bojito/ml-album-popularity.git
+   ```
+3. Install requirements  
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Enter your API keys in `config.py`
+   ```JS
+   client_id = 'YOUR_CLIENT_ID'
+   client_secret = 'YOUR_CLIENT_SECRET'
+  
 ## Spotify API    
 
 [`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/1%20-%20Spotify%20API.ipynb)
