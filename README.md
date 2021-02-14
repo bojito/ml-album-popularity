@@ -38,6 +38,9 @@
     <li>
       <a href="#challenges-so-far">Challenges so far</a>
     </li>
+      <li>
+      <a href="#next-steps">Next Steps</a>
+    </li>
   </ol>
   <br>
   <br>
@@ -91,6 +94,7 @@ Up to the point of downloading the metadata, the playlist consisted of **3.300 s
 * the genres are maintained at artist level in the spotify API. Seperate request per album artist.
 * the dataset is stored in a `json` file with the following keys: {artist_id, artist_name, album_id, album_name, album_popularity, genres, album_url}
 
+A sample `json` dataset file is stored in `\data` directory.
 
 ## Explore Dataset 
 
@@ -147,6 +151,8 @@ Random Forest Classifier gives the best overall accuracy but **overfits** the tr
 
 The most notable result is the F1-Score for `pop` genre: 65%
 
+*Check Next Steps section for optimization proposals.*
+
 **Sample Execution on Test Data**
 
 <p align="center">
@@ -157,8 +163,13 @@ The most notable result is the F1-Score for `pop` genre: 65%
 
 ## Predict Popularity
 
-[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/5%20-%20Predict%20Popularity.ipynb)
+[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/6%20-%20Predict%20Popularity.ipynb)
 
+We classify albums as **popular** if album popularity > 70, **common** otherwise. 
+
+The tested classifiers can not make useful predictions, F1-Score is 50%.
+
+*Check Next Steps section for optimization proposals.*
 
 ## Challenges so far 
 
@@ -166,3 +177,13 @@ The most notable result is the F1-Score for `pop` genre: 65%
 * Artist genres are returned as a list, which is a bit tricky to handle in pandas. 
 * Spotify API returns a large number of different genres. Had to keep the most common ones by using corellation matrix. (Perform clustering for better results)
 * Dataset contains more examples from pop genre compared to rock, rap. Should balance classes with more data.
+
+
+## Next Steps 
+
+To address the overfitting issue, the following steps can be performed:
+
+* Collect more data for each class. Try 500-1000 images per class.
+* Data augmentation using various transformations on the dataset images.
+* Use also Local Image features with the Bag of Visual Words(BOVW) technique. For example SIFT, SURF, KAZE.
+* Consider using a dimensionality reduction technique.
