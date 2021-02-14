@@ -143,7 +143,7 @@ The following features are extracted from each image:
 
 ## Classify Genre
 
-[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/6%20-%20Classify%20Genre.ipynb)
+[`view notebook`](https://nbviewer.jupyter.org/github/bojito/ml-album-popularity/blob/main/5%20-%20Classify%20Genre.ipynb)
 
 A set of different classifiers is tested using K-Fold Cross Validation. 
 
