@@ -85,7 +85,9 @@ Expore the dataset regarding album popularity and genres.
 * Spotify API returns multiple genres per artist, we keep the most common and filter out the rest based on their corellation.
 * The albums are annotated as pop, rap and rock. The albums that don't belong to one of these genres are removed. 
 
-The final dataset has the folowing distribution of genres:
+
+
+The final dataset contains **1.592 samples** and has the folowing distribution of genres:
 
 | Genre         | Albums Count      | 
 | ------------- |-----------:| 
@@ -101,10 +103,21 @@ The final dataset has the folowing distribution of genres:
 
 The following features are extracted from each image:
 
-* `has_face`: true if the image contains one or more faces
-* `hog_descriptor` : the hog descriptor vector 
-* `hsv_hist` : the hsv color histogram (3D)
-* `lbp_hist` : the local binary patterns histogram
+* `has_face`: that indicates if a **face** is present in the album cover
+* `hog_descriptor` : that quantifies the **structure** of the image  
+* `hsv_hist` : that quantifies the **color** of the image
+* `lbp_hist` : that quantifies the **texture** of the image
+
+**Combining Features**
+
+`hog_descriptor`, `hsv_hist`, `lbp_hist` are  feature descriptors that quantify an image **globally**.  To combine them, we concatenate each feature vector to form a single global feature vector. 
+
+<p align="center">
+  <a>
+    <img src="other/features.png" alt="Logo" width="830" height="141">
+  </a>
+</p>
+
 
 ## Predict Popularity
 
